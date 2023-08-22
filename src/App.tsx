@@ -10,6 +10,7 @@ import ChangeBasemaplayer from "./pages/ChangeBasemaplayer";
 import DisplayVectorTileLayer from "./pages/DisplayVectorTileLayer";
 import DisplayPLP from './pages/DisplayPLP';
 import DisplayFeatureLayer from './pages/DisplayFeatureLayer';
+import DisplayImageryLayer from './pages/DisplayImageryLayer';
 
 import LinkBtn from "./components/LinkBtn";
 
@@ -59,6 +60,9 @@ const App = () => {
             <li>
               <LinkBtn to="/displayfeaturelayer" text="Display Feature Layer" />
             </li>
+            <li>
+              <LinkBtn to="/displayimagerylayer" text="Display Imagery Layer" />
+            </li>
           </ul>
         </Sider>
         <Content style={contentStyle}>
@@ -70,6 +74,7 @@ const App = () => {
             <Route path="/displayvectortilelayer" element={<DisplayVectorTileLayer />} />
             <Route path="/displayplp" element={<DisplayPLP />} />
             <Route path="/displayfeaturelayer" element={<DisplayFeatureLayer />} />
+            <Route path="/displayimagerylayer" element={<DisplayImageryLayer />} />
           </Routes>
         </Content>
       </Layout>
