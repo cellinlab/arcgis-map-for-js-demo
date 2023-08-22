@@ -7,6 +7,9 @@ import "./App.css";
 import DisplayMap from "./pages/DisplayMap";
 import DisplayScene from "./pages/DisplayScene";
 import ChangeBasemaplayer from "./pages/ChangeBasemaplayer";
+import DisplayVectorTileLayer from "./pages/DisplayVectorTileLayer";
+
+import LinkBtn from "./components/LinkBtn";
 
 const { Sider, Content } = Layout;
 
@@ -37,34 +40,16 @@ const App = () => {
         <Sider style={siderStyle}>
           <ul>
             <li>
-              <Button
-                type="link"
-                onClick={() => {
-                  navigate("/displaymap");
-                }}
-              >
-                DisplayMap
-              </Button>
+              <LinkBtn to="/displaymap" text="DisplayMap" />
             </li>
             <li>
-              <Button
-                type="link"
-                onClick={() => {
-                  navigate("/displayscene");
-                }}
-              >
-                DisplayScene
-              </Button>
+              <LinkBtn to="/displayscene" text="DisplayScene" />
             </li>
             <li>
-              <Button
-                type="link"
-                onClick={() => {
-                  navigate("/changebasemaplayer");
-                }}
-              >
-                ChangeBasemaplayer
-              </Button>
+              <LinkBtn to="/changebasemaplayer" text="ChangeBasemaplayer" />
+            </li>
+            <li>
+              <LinkBtn to="/displayvectortilelayer" text="DisplayVectorTileLayer" />
             </li>
           </ul>
         </Sider>
@@ -74,6 +59,7 @@ const App = () => {
             <Route path="/displaymap" element={<DisplayMap />} />
             <Route path="/displayscene" element={<DisplayScene />} />
             <Route path="/changebasemaplayer" element={<ChangeBasemaplayer />} />
+            <Route path="/displayvectortilelayer" element={<DisplayVectorTileLayer />} />
           </Routes>
         </Content>
       </Layout>
