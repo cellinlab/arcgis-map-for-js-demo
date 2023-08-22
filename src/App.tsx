@@ -8,6 +8,8 @@ import DisplayMap from "./pages/DisplayMap";
 import DisplayScene from "./pages/DisplayScene";
 import ChangeBasemaplayer from "./pages/ChangeBasemaplayer";
 import DisplayVectorTileLayer from "./pages/DisplayVectorTileLayer";
+import DisplayPLP from './pages/DisplayPLP';
+import DisplayFeatureLayer from './pages/DisplayFeatureLayer';
 
 import LinkBtn from "./components/LinkBtn";
 
@@ -51,6 +53,12 @@ const App = () => {
             <li>
               <LinkBtn to="/displayvectortilelayer" text="DisplayVectorTileLayer" />
             </li>
+            <li>
+              <LinkBtn to="/displayplp" text="Display Point Line Polygon" />
+            </li>
+            <li>
+              <LinkBtn to="/displayfeaturelayer" text="Display Feature Layer" />
+            </li>
           </ul>
         </Sider>
         <Content style={contentStyle}>
@@ -60,6 +68,8 @@ const App = () => {
             <Route path="/displayscene" element={<DisplayScene />} />
             <Route path="/changebasemaplayer" element={<ChangeBasemaplayer />} />
             <Route path="/displayvectortilelayer" element={<DisplayVectorTileLayer />} />
+            <Route path="/displayplp" element={<DisplayPLP />} />
+            <Route path="/displayfeaturelayer" element={<DisplayFeatureLayer />} />
           </Routes>
         </Content>
       </Layout>
